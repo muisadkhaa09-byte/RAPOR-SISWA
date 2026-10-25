@@ -1,0 +1,173 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: #163b65;
+  color: white;
+  padding: 22px 6%;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar p {
+  margin-bottom: 0;
+  color: #dbeafe;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 28px auto;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  box-shadow: 0 3px 14px #0f172a0d;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #64748b;
+}
+
+.summary .card h2 {
+  color: #1670bd;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #1670bd;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #125792;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background: #eff6ff;
+}
+
+.aksi {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+button.hapus {
+  background: #b91c1c;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .navbar {
+    padding: 18px 4%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .navbar, footer, .summary,
+  #formSiswa, .container > section:not(#areaRapor),
+  #tombolCetak {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  #areaRapor {
+    display: block !important;
+    box-shadow: none;
+  }
+}
