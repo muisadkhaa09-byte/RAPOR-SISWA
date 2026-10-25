@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaporKita - Rapor Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <h1>RaporKita</h1>
+    <p>Rapor Digital dan Perkembangan Siswa</p>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <article class="card">
+        <p>Total Siswa</p>
+        <h2 id="totalSiswa">0</h2>
+      </article>
+      <article class="card">
+        <p>Rata-rata Nilai</p>
+        <h2 id="rataKelas">0</h2>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Tambah Siswa</h2>
+      <form id="formSiswa">
+        <label for="nama">Nama siswa</label>
+        <input id="nama" type="text" required
+          placeholder="Contoh: Andi Saputra">
+
+        <label for="kelas">Kelas</label>
+        <input id="kelas" type="text" required
+          placeholder="Contoh: 5A">
+
+        <label for="mapel">Mata pelajaran</label>
+        <input id="mapel" type="text" required
+          placeholder="Contoh: Matematika">
+
+        <label for="nilai1">Nilai tugas</label>
+        <input id="nilai1" type="number"
+          min="0" max="100" required>
+
+        <label for="nilai2">Nilai ujian</label>
+        <input id="nilai2" type="number"
+          min="0" max="100" required>
+
+        <label for="nilai3">Nilai praktik</label>
+        <input id="nilai3" type="number"
+          min="0" max="100" required>
+
+        <label for="catatan">Catatan guru</label>
+        <textarea id="catatan"
+          placeholder="Catatan perkembangan siswa"></textarea>
+
+        <button type="submit">Simpan Data</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Daftar Rapor Siswa</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Mata Pelajaran</th>
+              <th>Rata-rata</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="daftarSiswa"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="areaRapor" class="card" hidden>
+      <div id="isiRapor"></div>
+      <button id="tombolCetak" type="button">
+        Cetak / Simpan PDF
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>RaporKita — Prototipe pembelajaran</p>
+  </footer>
+</body>
+</html>
